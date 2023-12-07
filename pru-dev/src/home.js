@@ -57,10 +57,8 @@ export default function Home() {
             <CssBaseline />
             <NavBar />
             <main>
-                {/* Hero unit */}
                 <Box
                     sx={{
-
                         pt: 8,
                         pb: 6,
                     }}
@@ -89,7 +87,7 @@ export default function Home() {
                                     Frontend Developer
                                 </Typography>
                                 <Typography variant="h5" align="right" color="text.secondary" paragraph>
-                                    Welcome to my portfolio! I use this platform to showcase my work in development, design and poetry.
+                                    Welcome to my portfolio! I use this platform to showcase my work in development and UI/UX design.
                                 </Typography>
                             </Box>
 

@@ -17,27 +17,11 @@ import Link from '@mui/material/Link';
 import shadows from '@mui/material/styles/shadows';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green, brown, grey } from '@mui/material/colors';
-import NavBar from './Components/NavBar';
+import devBoy from './Assets/dev-boy.png';
 import { cards } from './Constants/home';
-import { useLocation } from 'react-router-dom';
+import {useNavigate, useLocation} from "react-router-dom";
+import NavBar from './Components/NavBar';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
-//const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 const theme = createTheme({
     palette: {
         primary: {
@@ -49,37 +33,38 @@ const theme = createTheme({
     },
 });
 
-export default function Profile() {
+export default function Home() {
+    const navigate = useNavigate();
     const location = useLocation();
     const data = location?.state?.data;
-    console.log("Propss", data, location?.state)
+    console.log("Propss", data)
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
             <main>
-                {/* Hero unit */} 
-                <Typography>
-                Blahhhhhhhhhhhhhhhh    
-                </Typography>   
-                
+                        <Container style={{ display: 'flex', marginTop: 100 }}>
+                            {/* <MyImageCard /> */}
+                            <Box>
+                                <Typography
+                                    component="h2"
+                                    variant="h3"
+                                    align="left"
+                                    color="text.primary"
+                                    gutterBottom
+                                >
+                                    {data?.name}
+                                </Typography>
+                                
+                                <Typography variant="h6" align="left" color="text.secondary" paragraph>
+                                    {data?.description}
+                                </Typography>
+                            </Box>
+                            <Box >
+                                <img src={devBoy} alt="Image" width={300} />
+                            </Box>
+                        </Container>
             </main>
-            {/* Footer */}
-            <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-                <Typography variant="h6" align="center" gutterBottom>
-                    Footer
-                </Typography>
-                <Typography
-                    variant="subtitle1"
-                    align="center"
-                    color="text.secondary"
-                    component="p"
-                >
-                    Something here to give the footer a purpose!
-                </Typography>
-                <Copyright />
-            </Box>
-            {/* End footer */}
         </ThemeProvider>
     );
 }
