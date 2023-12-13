@@ -21,6 +21,7 @@ import devBoy from './Assets/dev-boy.png';
 import { cards } from './Constants/home';
 import {useNavigate, useLocation} from "react-router-dom";
 import NavBar from './Components/NavBar';
+import SlidingImageDisplay from './Components/SlidingImageDisplay';
 
 const theme = createTheme({
     palette: {
@@ -60,9 +61,17 @@ export default function Home() {
                                     {data?.description}
                                 </Typography>
                             </Box>
-                            <Box >
-                                <img src={devBoy} alt="Image" width={300} />
+                            <Box>
+                                <SlidingImageDisplay projectCode={data?.projectCode}/>
                             </Box>
+                        </Container>
+                        <Container style={{display: 'flex'}}>
+                                <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
+                                   Github:
+                                </Typography>
+                                <Link href={data?.github} target='_blank' mt={0.5}>
+                                {data?.github}
+                                </Link>
                         </Container>
             </main>
         </ThemeProvider>

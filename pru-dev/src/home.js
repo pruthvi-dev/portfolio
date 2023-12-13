@@ -118,16 +118,15 @@ export default function Home() {
                                         sx={{
                                             // 16:9
                                             pt: '56.25%',
+                                            height: 50
                                         }}
-                                        image="https://source.unsplash.com/random?wallpapers"
+                                        //image={devBoy}
                                     />
-                                    <CardContent sx={{ flexGrow: 1 }}>
+                                    <CardContent sx={{ flexGrow: 1}}>
                                         <Typography gutterBottom variant="h5" component="h2">
                                             {card?.name}
                                         </Typography>
-                                        <Typography height={50} overflow={"hidden"}>
-                                            {card?.description}
-                                        </Typography>
+                                        
                                     </CardContent>
                                     <CardActions sx={{justifyContent: "space-evenly"}}>
                                         <Button size="small" onClick={() => navigate('/profile', {
@@ -135,7 +134,12 @@ export default function Home() {
                                                 data: card
                                             }
                                         })}>View</Button>
-                                        <Button size="small">Github {<LaunchIcon />}</Button>
+                                        <Button 
+                                        size="small" 
+                                        target='_blank' 
+                                        >
+                                            Github {<LaunchIcon />}
+                                        </Button>
                                     </CardActions>
                                 </Card>
                             </Grid>
@@ -144,7 +148,7 @@ export default function Home() {
                 </Container>
             </main>
             {/* Footer */}
-            <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+            {/* <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
                 <Typography variant="h6" align="center" gutterBottom>
                     Footer
                 </Typography>
@@ -157,7 +161,7 @@ export default function Home() {
                     Something here to give the footer a purpose!
                 </Typography>
                 <Copyright />
-            </Box>
+            </Box> */}
             {/* End footer */}
         </ThemeProvider>
     );
