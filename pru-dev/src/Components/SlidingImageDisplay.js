@@ -1,26 +1,8 @@
 import React from "react";
-import { Button, Paper, MobileStepper, Typography, Container, } from "@mui/material";
+import { Button, Container, } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { ProjectImages } from "../Constants/home";
-// Collection of images with their labels and paths
-// const MyCollection = [
-//     {
-//         label: "First Picture",
-//         imgPath:
-//             "https://media.geeksforgeeks.org/wp-content/uploads/20210208000010/1.png",
-//     },
-//     {
-//         label: "Second Picture",
-//         imgPath:
-//             "https://media.geeksforgeeks.org/wp-content/uploads/20210208000009/2.png",
-//     },
-//     {
-//         label: "Third Picture",
-//         imgPath:
-//             "https://media.geeksforgeeks.org/wp-content/uploads/20210208000008/3.png",
-//     },
-// ];
 
 const SlidingImageDisplay = (props) => {
     const [index, setActiveStep] = React.useState(0);
@@ -46,7 +28,7 @@ const SlidingImageDisplay = (props) => {
                 }}
             >
                 <Button
-                    disabled={index==0}
+                    disabled={index===0}
                     size="small"
                     onClick={goToPrevPicture}
                 >
@@ -54,9 +36,9 @@ const SlidingImageDisplay = (props) => {
                 </Button>
                 <img
                     src={MyCollection[index]}
+                    alt={index}
                     style={{
                         height: 255,
-                        
                         maxWidth: 400,
                         display: "block",
                         overflow: "hidden",
@@ -65,7 +47,7 @@ const SlidingImageDisplay = (props) => {
                 />
 
                 <Button
-                    disabled={index+1==CollectionSize}
+                    disabled={index+1===CollectionSize}
                     size="small"
                     onClick={goToNextPicture}
                 >

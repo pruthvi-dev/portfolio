@@ -1,27 +1,15 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
-import LaunchIcon from '@mui/icons-material/Launch';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import shadows from '@mui/material/styles/shadows';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { green, brown, grey } from '@mui/material/colors';
-import devBoy from './Assets/dev-boy.png';
-import { cards } from './Constants/home';
-import {useNavigate, useLocation} from "react-router-dom";
+import { green, brown } from '@mui/material/colors';
+import {useLocation} from "react-router-dom";
 import NavBar from './Components/NavBar';
 import SlidingImageDisplay from './Components/SlidingImageDisplay';
+import { List, ListItem } from '@mui/material';
 
 const theme = createTheme({
     palette: {
@@ -35,7 +23,6 @@ const theme = createTheme({
 });
 
 export default function Home() {
-    const navigate = useNavigate();
     const location = useLocation();
     const data = location?.state?.data;
     console.log("Propss", data)
@@ -72,6 +59,44 @@ export default function Home() {
                                 <Link href={data?.github} target='_blank' mt={0.5}>
                                 {data?.github}
                                 </Link>
+                        </Container>
+                        <Container sx={{mt: 6}}>
+                                <Typography
+                                    variant="h4"
+                                    align="left"
+                                    color="text.primary"
+                                    gutterBottom
+                                >
+                                    Tech Stack
+                                </Typography>
+                                
+                                <Typography variant="h6" align="left" color="text.secondary" paragraph>
+                                    {data?.description}
+                                </Typography>
+                        </Container>
+                        <Container sx={{mt: 6}}>
+                                <Typography
+                                    variant="h4"
+                                    align="left"
+                                    color="text.primary"
+                                    gutterBottom
+                                >
+                                    Awards/Recognition
+                                </Typography>
+                                
+                                <Typography variant="h6" align="left" color="text.secondary" paragraph>
+                                    <List>
+                                        <ListItem>
+                                            Lorem Ipsum
+                                        </ListItem>
+                                        <ListItem>
+                                            Lorem Ipsum
+                                        </ListItem>
+                                        <ListItem>
+                                            Lorem Ipsum
+                                        </ListItem>
+                                    </List>
+                                </Typography>
                         </Container>
             </main>
         </ThemeProvider>

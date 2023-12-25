@@ -1,5 +1,4 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import LaunchIcon from '@mui/icons-material/Launch';
 import Card from '@mui/material/Card';
@@ -10,35 +9,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import shadows from '@mui/material/styles/shadows';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { green, brown, grey } from '@mui/material/colors';
+import { green, brown } from '@mui/material/colors';
 import devBoy from './Assets/dev-boy.png';
 import { cards } from './Constants/home';
 import {useNavigate} from "react-router-dom";
 import NavBar from './Components/NavBar';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
-//const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 const theme = createTheme({
     palette: {
         primary: {
@@ -68,7 +47,7 @@ export default function Home() {
                         <Container style={{ display: 'flex' }}>
                             {/* <MyImageCard /> */}
                             <Box >
-                                <img src={devBoy} alt="Image" width={300} />
+                                <img src={devBoy} alt="homeImg" width={300} />
                             </Box>
                             <Box>
                                 <Typography

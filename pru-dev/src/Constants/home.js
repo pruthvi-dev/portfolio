@@ -11,7 +11,7 @@ const cards = [
     },
     {
         name: 'Movie Recommendation System',
-        description: 'This project is a web app for movie websites like Netflix where a user is allowed to create an account and watch movies. This web app has mainly focused on the quality of recommendations we make to the user. From the various forms of recommendations we have used some of the most appropriate ones. The user can view the already watched and rated movies in the dashboard.',
+        description: 'This project is a web app for movie websites like Netflix where a user is allowed to create an account and watch movies. This web app has mainly focused on the quality of recommendations we make to the user.',
         image: 'blah', 
         github: 'https://github.com/Pruthvi-Shivappa/Movie_Recommendation_System',
         key: 2,

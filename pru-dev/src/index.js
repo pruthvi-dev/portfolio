@@ -1,12 +1,10 @@
 import React from 'react';
 //import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Components/App/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from "react-dom/client";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
-import Home from './home';
-import Profile from './profile';
+import {BrowserRouter} from "react-router-dom";
 
 // Soft UI Context Provider
 //import { ArgonControllerProvider } from "./context/index";
