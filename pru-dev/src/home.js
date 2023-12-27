@@ -31,6 +31,7 @@ const theme = createTheme({
 
 export default function Home() {
     const navigate = useNavigate();
+    
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -79,7 +80,7 @@ export default function Home() {
                         justifyContent="center"
                     >
                         <Button variant="contained">Projects</Button>
-                        <Button variant="outlined">Work experience</Button>
+                        
                     </Stack>
 
                 </Box>

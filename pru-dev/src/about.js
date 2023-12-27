@@ -56,7 +56,7 @@ export default function About() {
                             <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
                                 LinkedIn:
                             </Typography>
-                            <Link href="" target='_blank' mt={0.5}>
+                            <Link href="https://www.linkedin.com/in/pruthvi-p-shivappa/" target='_blank' mt={0.5}>
                                 https://www.linkedin.com/in/pruthvi-p-shivappa/
                             </Link>
                         </Box>
@@ -346,7 +346,7 @@ export default function About() {
                         fontWeight={"medium"}
                         gutterBottom
                     >
-                        Tech Stack
+                        Interests
                     </Typography>
                     <Box display={"flex"} mb={2}>
                         <Typography variant="h6" mr={20}>

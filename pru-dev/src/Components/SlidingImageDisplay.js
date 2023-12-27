@@ -24,7 +24,7 @@ const SlidingImageDisplay = (props) => {
                 style={{
                     maxWidth: 700,
                     flexGrow: 1,
-                    display: 'flex'
+                    display: 'flex',
                 }}
             >
                 <Button

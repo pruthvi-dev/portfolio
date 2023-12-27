@@ -1,4 +1,9 @@
 import devBoy from '../Assets/dev-boy.png';
+import Admin from '../Assets/Alternet/Admin.png';
+import Feed from '../Assets/Alternet/Feed.png';
+import Home from '../Assets/Alternet/Home.png';
+import SignIn from '../Assets/Alternet/SignIn.png';
+import SystemDesign from '../Assets/Alternet/SystemDesign.jpg';
 
 const cards = [
     {
@@ -29,7 +34,7 @@ const cards = [
 ];
 
 const ProjectImages = {
-    ALTNT: [devBoy],
+    ALTNT: [Home, SystemDesign, Feed, Admin,  SignIn],
     MRS: [devBoy, devBoy],
     HIS: [devBoy,devBoy,devBoy]
 }
