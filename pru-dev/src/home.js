@@ -36,7 +36,7 @@ export default function Home() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
-            <main>
+            <main style={{paddingBottom: 30}}>
                 <Box
                     sx={{
                         pt: 8,
@@ -80,7 +80,6 @@ export default function Home() {
                         justifyContent="center"
                     >
                         <Button variant="contained">Projects</Button>
-                        
                     </Stack>
 
                 </Box>
@@ -100,7 +99,7 @@ export default function Home() {
                                             pt: '56.25%',
                                             height: 50
                                         }}
-                                        //image={devBoy}
+                                        image={card?.image}
                                     />
                                     <CardContent sx={{ flexGrow: 1}}>
                                         <Typography gutterBottom variant="h5" component="h2">
@@ -118,7 +117,7 @@ export default function Home() {
                                         size="small" 
                                         target='_blank' 
                                         >
-                                            Github {<LaunchIcon />}
+                                            Link {<LaunchIcon />}
                                         </Button>
                                     </CardActions>
                                 </Card>

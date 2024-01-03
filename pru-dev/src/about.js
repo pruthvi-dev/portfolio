@@ -26,7 +26,7 @@ export default function About() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
-            <main>
+            <main style={{paddingBottom: 30}}>
                 <Container style={{ display: 'flex', marginTop: 80 }}>
                     <Box>
                         <Typography

@@ -42,7 +42,7 @@ export default function Home() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
-            <main>
+            <main style={{paddingBottom: 30}}>
                 <Container style={{ display: 'flex', marginTop: 100 }}>
                     {/* <MyImageCard /> */}
                     <Box>
@@ -66,7 +66,7 @@ export default function Home() {
                 </Container>
                 <Container style={{ display: 'flex' }}>
                     <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
-                        Github:
+                        Link:
                     </Typography>
                     <Link href={data?.github} target='_blank' mt={0.5}>
                         {data?.github}
@@ -91,7 +91,7 @@ export default function Home() {
                         })}
                     </Grid>
                 </Container>
-                <Container sx={{ mt: 6 }}>
+                <Container  sx={{ mt: 6, display: !AWARDS[data?.projectCode].length && "none" }}>
                     <Typography
                         variant="h4"
                         align="left"
