@@ -7,7 +7,6 @@ import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green, brown } from '@mui/material/colors';
 import NavBar from './Components/NavBar';
-import devBoy from './Assets/dev-boy.png';
 import aboutBoy from './Assets/workMan.gif';
 import { List, ListItem } from '@mui/material';
 import Grid from '@mui/material/Grid';
@@ -78,8 +77,8 @@ export default function About() {
                     >
                         Tech Stack
                     </Typography>
-                    
-                    <Grid container mt={1}  mb={2} rowSpacing={2}>
+                    <Box>
+                    <Grid container mt={1}  mb={2} rowSpacing={4}>
                         <Grid item xs={3}>
                         <Typography variant="h6" >
                             React JS
@@ -121,7 +120,7 @@ export default function About() {
                         </Typography>
                         </Grid>
                     </Grid>
-                    
+                    </Box>
                 </Container>
                 <Container sx={{ mt: 6 }}>
                     <Typography

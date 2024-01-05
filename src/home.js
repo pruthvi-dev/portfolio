@@ -41,6 +41,14 @@ export default function Home() {
     const useStyles = makeStyles(homePageStyles);
 
     const classes = useStyles();
+    const navigateToProfile = () => {
+        const element = projectRef.current;
+        if (element) {
+            element.scrollIntoView({
+                behaviour: 'smooth'
+            });
+        }
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -86,14 +94,7 @@ export default function Home() {
                     <IconButton 
                     className={classes.bouncingArrow}
                     sx={{mt: 2}}
-                    onClick={() => {
-                        const element = projectRef.current;
-                        if (element) {
-                            element.scrollIntoView({
-                                behaviour: 'smooth'
-                            });
-                        }
-                    }}
+                    onClick={navigateToProfile}
                     >
                             <KeyboardArrowDownIcon />
                     </IconButton>
@@ -132,7 +133,6 @@ export default function Home() {
                                     <CardMedia
                                         component="div"
                                         sx={{
-                                            // 16:9
                                             pt: '56.25%',
                                             height: 50
                                         }}

@@ -3,17 +3,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-//import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-//import Paper from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green, brown } from '@mui/material/colors';
 import { useLocation } from "react-router-dom";
 import NavBar from './Components/NavBar';
 import SlidingImageDisplay from './Components/SlidingImageDisplay';
-import { List, ListItem, Grid, Paper } from '@mui/material';
+import { List, ListItem, Grid } from '@mui/material';
 import { TECH_STACK, AWARDS } from './Constants/profileConstants';
-import { styled } from '@mui/material/styles';
+
 
 const theme = createTheme({
     palette: {
@@ -26,17 +24,9 @@ const theme = createTheme({
     },
 });
 
-export default function Home() {
+export default function Profile() {
     const location = useLocation();
     const data = location?.state?.data;
-
-    // const Item = styled(Paper)(({ theme }) => ({
-    //     backgroundColor: '#fff',
-    //     ...theme.typography.body1,
-    //     padding: theme.spacing(1),
-    //     textAlign: 'center',
-    //     color: theme.palette.primary.main,
-    // }));
 
     return (
         <ThemeProvider theme={theme}>
