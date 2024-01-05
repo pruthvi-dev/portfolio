@@ -30,13 +30,13 @@ export default function Home() {
     const location = useLocation();
     const data = location?.state?.data;
 
-    const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body1,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.primary.main,
-    }));
+    // const Item = styled(Paper)(({ theme }) => ({
+    //     backgroundColor: '#fff',
+    //     ...theme.typography.body1,
+    //     padding: theme.spacing(1),
+    //     textAlign: 'center',
+    //     color: theme.palette.primary.main,
+    // }));
 
     return (
         <ThemeProvider theme={theme}>
@@ -85,7 +85,7 @@ export default function Home() {
                         {TECH_STACK[data?.projectCode]?.map((val) => {
                             return (
                                 <Grid item xs={4}>
-                                    <Item>{val}</Item>
+                                    <Typography variant="h6" >{val}</Typography>
                                 </Grid>
                             )
                         })}

@@ -8,7 +8,6 @@ import { green, brown } from '@mui/material/colors';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { useState } from 'react';
 
 const style = {
     position: 'absolute',
@@ -35,7 +34,6 @@ const theme = createTheme({
 
 export default function ContactModal(props) {
     const { open, handleClose } = props;
-    const [copied, setCopied] = useState(false);
 
     return (
         <ThemeProvider theme={theme}>

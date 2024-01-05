@@ -1,4 +1,3 @@
-import devBoy from '../Assets/dev-boy.png';
 import Admin from '../Assets/Alternet/Admin.png';
 import Feed from '../Assets/Alternet/Feed.png';
 import Home from '../Assets/Alternet/Home.png';
@@ -7,7 +6,6 @@ import SystemDesign from '../Assets/Alternet/SystemDesign.jpg';
 import Innerscore from '../Assets/Innerscore/Innerscore.webp';
 import Samvidha from '../Assets/UIUX/Samvidha.png';
 import Inovact from '../Assets/UIUX/Inovact.png';
-import Cover from '../Assets/UIUX/cover.png';
 import Insta from '../Assets/UIUX/Instagram.png';
 const cards = [
     {

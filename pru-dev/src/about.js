@@ -8,7 +8,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green, brown } from '@mui/material/colors';
 import NavBar from './Components/NavBar';
 import devBoy from './Assets/dev-boy.png';
+import aboutBoy from './Assets/workMan.gif';
 import { List, ListItem } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 const theme = createTheme({
     palette: {
@@ -62,7 +64,7 @@ export default function About() {
                         </Box>
                     </Box>
                     <Box>
-                        <img src={devBoy} alt="homeImg" width={300} />
+                        <img src={aboutBoy} alt="homeImg" width={300} />
                     </Box>
                 </Container>
 
@@ -76,34 +78,50 @@ export default function About() {
                     >
                         Tech Stack
                     </Typography>
-                    <Box display={"flex"} mb={2}>
-                        <Typography variant="h6" mr={20}>
+                    
+                    <Grid container mt={1}  mb={2} rowSpacing={2}>
+                        <Grid item xs={3}>
+                        <Typography variant="h6" >
                             React JS
                         </Typography>
-                        <Typography variant="h6" mr={20}>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <Typography variant="h6" >
                             GraphQL
                         </Typography>
-                        <Typography variant="h6" mr={20}>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <Typography variant="h6">
                             Elasticsearch
                         </Typography>
-                        <Typography variant="h6" mr={20}>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <Typography variant="h6" >
                             Kibana
                         </Typography>
-                    </Box>
-                    <Box display={"flex"}>
-                        <Typography variant="h6" mr={19}>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <Typography variant="h6">
                             MongoDB
                         </Typography>
-                        <Typography variant="h6" mr={19}>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <Typography variant="h6">
                             Javascript
                         </Typography>
-                        <Typography variant="h6" mr={27}>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <Typography variant="h6">
                             Python
                         </Typography>
+                        </Grid>
+                        <Grid item xs={3}>
                         <Typography variant="h6">
                             HTML,CSS,Javascript
                         </Typography>
-                    </Box>
+                        </Grid>
+                    </Grid>
+                    
                 </Container>
                 <Container sx={{ mt: 6 }}>
                     <Typography

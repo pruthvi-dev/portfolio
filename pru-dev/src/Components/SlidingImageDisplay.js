@@ -10,13 +10,9 @@ const SlidingImageDisplay = (props) => {
     const MyCollection = ProjectImages[projectCode];
     const CollectionSize = MyCollection.length;
     // Function to go to the next picture
-    const goToNextPicture = () => {
-        { index + 1 < CollectionSize && setActiveStep(index + 1) }
-    };
+    const goToNextPicture = () => { index + 1 < CollectionSize && setActiveStep(index + 1) };
 
-    const goToPrevPicture = () => {
-        { index - 1 >= 0 && setActiveStep(index - 1) }
-    };
+    const goToPrevPicture = () => { index - 1 >= 0 && setActiveStep(index - 1) };
 
     return (
         <div>

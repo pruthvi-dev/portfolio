@@ -15,8 +15,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green, brown } from '@mui/material/colors';
 import devBoy from './Assets/dev-boy.png';
 import { cards } from './Constants/home';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from './Components/NavBar';
+import { useRef } from 'react';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { IconButton } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { homePageStyles } from './Styles/homePage';
 
 const theme = createTheme({
     palette: {
@@ -31,12 +36,17 @@ const theme = createTheme({
 
 export default function Home() {
     const navigate = useNavigate();
-    
+    const projectRef = useRef(null);
+
+    const useStyles = makeStyles(homePageStyles);
+
+    const classes = useStyles();
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
-            <main style={{paddingBottom: 30}}>
+            <main style={{ paddingBottom: 30 }}>
                 <Box
                     sx={{
                         pt: 8,
@@ -64,7 +74,7 @@ export default function Home() {
                                     variant="h3"
                                     align="right"
                                     color={green[900]}>
-                                    Frontend Developer
+                                    Frontend Developer | UI UX Designer
                                 </Typography>
                                 <Typography variant="h5" align="right" color="text.secondary" paragraph>
                                     Welcome to my portfolio! I use this platform to showcase my work in development and UI/UX design.
@@ -73,24 +83,51 @@ export default function Home() {
 
                         </Container>
                     </Box>
-                    <Stack
-                        sx={{ pt: 4 }}
-                        direction="row"
-                        spacing={2}
-                        justifyContent="center"
+                    <IconButton 
+                    className={classes.bouncingArrow}
+                    sx={{mt: 2}}
+                    onClick={() => {
+                        const element = projectRef.current;
+                        if (element) {
+                            element.scrollIntoView({
+                                behaviour: 'smooth'
+                            });
+                        }
+                    }}
                     >
-                        <Button variant="contained">Projects</Button>
-                    </Stack>
-
+                            <KeyboardArrowDownIcon />
+                    </IconButton>
+                    
                 </Box>
-                <Container sx={{ py: 8 }} maxWidth="md">
-                    {/* End hero unit */}
-                    <Grid container spacing={4}>
+                <Stack
+                        sx={{ pt: 6 }}
+                        direction={"row"}
+                        spacing={2}
+                        justifyContent={"center"}
+                        onClick={() => {
+                            const element = projectRef.current;
+                            if (element) {
+                                element.scrollIntoView({
+                                    behaviour: 'smooth'
+                                });
+                            }
+                        }}
+                    >
+                        <Button variant="outlined" size='small'>
+                            <Typography variant="h6">
+                                Projects
+                            </Typography>
+                        </Button>
+
+                            
+                </Stack>
+                <Container sx={{ py: 8 }} maxWidth="md" >
+                    <Grid container spacing={8} ref={projectRef}>
                         {cards.map((card) => (
                             <Grid item key={card?.key} xs={12} sm={6} md={4}>
                                 <Card
-                                    sx={{ height: '100%', display: 'flex', flexDirection: 'column'}}
-                                    
+                                    sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                                    className={classes.cards}
                                 >
                                     <CardMedia
                                         component="div"
@@ -101,21 +138,21 @@ export default function Home() {
                                         }}
                                         image={card?.image}
                                     />
-                                    <CardContent sx={{ flexGrow: 1}}>
+                                    <CardContent sx={{ flexGrow: 1 }}>
                                         <Typography gutterBottom variant="h5" component="h2">
                                             {card?.name}
                                         </Typography>
-                                        
+
                                     </CardContent>
-                                    <CardActions sx={{justifyContent: "space-evenly"}}>
+                                    <CardActions sx={{ justifyContent: "space-evenly" }}>
                                         <Button size="small" onClick={() => navigate('/profile', {
                                             state: {
                                                 data: card
                                             }
                                         })}>View</Button>
-                                        <Button 
-                                        size="small" 
-                                        target='_blank' 
+                                        <Button
+                                            size="small"
+                                            target='_blank'
                                         >
                                             Link {<LaunchIcon />}
                                         </Button>
@@ -126,22 +163,6 @@ export default function Home() {
                     </Grid>
                 </Container>
             </main>
-            {/* Footer */}
-            {/* <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-                <Typography variant="h6" align="center" gutterBottom>
-                    Footer
-                </Typography>
-                <Typography
-                    variant="subtitle1"
-                    align="center"
-                    color="text.secondary"
-                    component="p"
-                >
-                    Something here to give the footer a purpose!
-                </Typography>
-                <Copyright />
-            </Box> */}
-            {/* End footer */}
         </ThemeProvider>
     );
 }
