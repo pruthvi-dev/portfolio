@@ -43,7 +43,7 @@ function NavBar() {
     return (
         <AppBar position="relative" color='transparent' sx={{ boxShadow: 0 }}>
 
-            <Stack direction={'row'} justifyContent={'flex-end'} alignContent={'flex-end'} py={4} spacing={4} px={20} color={green[900]}>
+            <Stack direction={'row'}  justifyContent={{ xs: 'center', md: 'flex-end' }} alignContent={'flex-end'} py={4} spacing={4} px={10} color={green[900]}>
                 <Button sx={home} mx={4} onClick={() => navigate('/', { replace: true })} noWrap>
                     Home
                 </Button>

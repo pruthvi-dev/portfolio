@@ -2,7 +2,6 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green, brown } from '@mui/material/colors';
@@ -33,7 +32,8 @@ export default function Profile() {
             <CssBaseline />
             <NavBar />
             <main style={{paddingBottom: 30}}>
-                <Container style={{ display: 'flex', marginTop: 100 }}>
+                <Box px={10}>
+            <Box  marginY={10} display={"flex"} flexDirection={{ xs: 'column', md: 'row' }} alignItems={"center"} justifyContent={"space-between"} >
                     {/* <MyImageCard /> */}
                     <Box>
                         <Typography
@@ -53,16 +53,16 @@ export default function Profile() {
                     <Box mt={6}>
                         <SlidingImageDisplay projectCode={data?.projectCode} />
                     </Box>
-                </Container>
-                <Container style={{ display: 'flex' }}>
+                </Box>
+                <Box style={{ display: 'flex' }}>
                     <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
                         Link:
                     </Typography>
                     <Link href={data?.github} target='_blank' mt={0.5}>
                         {data?.github}
                     </Link>
-                </Container>
-                <Container sx={{ mt: 6 }}>
+                </Box>
+                <Box sx={{ mt: 6 }}>
                     <Typography
                         variant="h4"
                         align="left"
@@ -80,8 +80,8 @@ export default function Profile() {
                             )
                         })}
                     </Grid>
-                </Container>
-                <Container  sx={{ mt: 6, display: !AWARDS[data?.projectCode].length && "none" }}>
+                </Box>
+                <Box  sx={{ mt: 6, display: !AWARDS[data?.projectCode].length && "none" }}>
                     <Typography
                         variant="h4"
                         align="left"
@@ -109,7 +109,8 @@ export default function Profile() {
                             })}
                         </List>
                     </Typography>
-                </Container>
+                </Box>
+                </Box>
             </main>
         </ThemeProvider>
     );

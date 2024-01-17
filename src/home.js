@@ -62,65 +62,55 @@ export default function Home() {
                     }}
                     alignSelf={"flex-end"}
                 >
-                    <Box marginY={10}>
-                        <Container style={{ display: 'flex' }}>
-                            {/* <MyImageCard /> */}
-                            <Box >
-                                <img src={devBoy} alt="homeImg" width={300} />
-                            </Box>
-                            <Box>
-                                <Typography
-                                    component="h1"
-                                    variant="h2"
-                                    align="right"
-                                    color="text.primary"
-                                    gutterBottom
-                                >
-                                    Pruthvi
-                                </Typography>
-                                <Typography
-                                    variant="h3"
-                                    align="right"
-                                    color={green[900]}>
-                                    Frontend Developer | UI UX Designer
-                                </Typography>
-                                <Typography variant="h5" align="right" color="text.secondary" paragraph>
-                                    Welcome to my portfolio! I use this platform to showcase my work in development and UI/UX design.
-                                </Typography>
-                            </Box>
 
-                        </Container>
+                    <Box px={{ xs: 2, md: 10 }} marginY={5} display="flex" flexDirection={{ xs: 'column', md: 'row' }} alignItems={{ xs: 'center', md: 'flex-start' }} justifyContent="space-between">
+                        <Box marginBottom={{ xs: 4, md: 0 }}>
+                            <img src={devBoy} alt="homeImg" width={300} />
+                        </Box>
+                        <Box>
+                            <Typography component="h1" variant="h2" textAlign={{ xs: 'center', md: 'right' }} color="text.primary" gutterBottom>
+                                Pruthvi
+                            </Typography>
+                            <Typography variant="h3" textAlign={{ xs: 'center', md: 'right' }} color={green[900]}>
+                                Frontend Developer | UI UX Designer
+                            </Typography>
+                            <Typography variant="h5" textAlign={{ xs: 'center', md: 'right' }} color="text.secondary" paragraph>
+                                Welcome to my portfolio! I use this platform to showcase my work in development and UI/UX design.
+                            </Typography>
+                        </Box>
                     </Box>
-                    <IconButton 
-                    className={classes.bouncingArrow}
-                    sx={{mt: 2}}
-                    onClick={navigateToProfile}
+
+
+                    <IconButton
+                        className={classes.bouncingArrow}
+                        sx={{ mt: 2 }}
+                        onClick={navigateToProfile}
                     >
-                            <KeyboardArrowDownIcon />
+                        <KeyboardArrowDownIcon />
                     </IconButton>
-                    
+
                 </Box>
                 <Stack
-                        sx={{ pt: 6 }}
-                        direction={"row"}
-                        spacing={2}
-                        justifyContent={"center"}
-                        onClick={() => {
-                            const element = projectRef.current;
-                            if (element) {
-                                element.scrollIntoView({
-                                    behaviour: 'smooth'
-                                });
-                            }
-                        }}
-                    >
-                        <Button variant="outlined" size='small'>
-                            <Typography variant="h6">
-                                Projects
-                            </Typography>
-                        </Button>
+                    sx={{ pt: 6 }}
+                    direction={"row"}
+                    spacing={2}
+                    justifyContent={"center"}
+                    onClick={() => {
+                        const element = projectRef.current;
+                        if (element) {
+                            element.scrollIntoView({
+                                behaviour: 'smooth'
+                            });
+                        }
+                    }}
+                >
+                    <Button variant="outlined" size='small'>
+                        <Typography variant="h6">
+                            Projects
+                        </Typography>
+                    </Button>
 
-                            
+
                 </Stack>
                 <Container sx={{ py: 8 }} maxWidth="md" >
                     <Grid container spacing={8} ref={projectRef}>
