@@ -18,9 +18,8 @@ const SlidingImageDisplay = (props) => {
         <div>
             <Container
                 style={{
-                    maxWidth: 700,
-                    flexGrow: 1,
                     display: 'flex',
+                    justifyContent: 'center'
                 }}
             >
                 <Button
@@ -34,10 +33,9 @@ const SlidingImageDisplay = (props) => {
                     src={MyCollection[index]}
                     alt={index}
                     style={{
-                        height: 255,
-                        maxWidth: 400,
-                        display: "block",
-                        overflow: "hidden",
+                        height: 255,  
+                        width: '100%',
+                        maxWidth: 400,  
                     }}
                     
                 />

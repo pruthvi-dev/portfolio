@@ -31,85 +31,81 @@ export default function Profile() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
-            <main style={{paddingBottom: 30}}>
+            <main style={{ paddingBottom: 30 }}>
                 <Box px={10}>
-            <Box  marginY={10} display={"flex"} flexDirection={{ xs: 'column', md: 'row' }} alignItems={"center"} justifyContent={"space-between"} >
-                    {/* <MyImageCard /> */}
-                    <Box>
+                    <Box marginY={10} display={"flex"} flexDirection={{ xs: 'column', md: 'row' }} alignItems={"center"} justifyContent={"space-between"} >
+                        {/* <MyImageCard /> */}
+                        <Box width={{ md: "60%" }}>
+                            <Typography
+                                component="h2"
+                                variant="h3"
+                                textAlign={{ xs: 'center', md: 'left' }}
+                                color="text.primary"
+                                gutterBottom
+                            >
+                                {data?.name}
+                            </Typography>
+
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
+                                {data?.description}
+                            </Typography>
+                        </Box>
+                        <Box width={{ md: "40%" }} mt={6}>
+                            <SlidingImageDisplay projectCode={data?.projectCode} />
+                        </Box>
+                    </Box>
+                    <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }}>
+                        <Typography variant="h5" textAlign={{ xs: 'center', md: 'left' }} color="text.primary" marginRight={4}>
+                            Link:
+                        </Typography>
+                        <Link href={data?.github} target='_blank' mt={0.5}>
+                            {data?.github}
+                        </Link>
+                    </Box>
+                    <Box sx={{ mt: 6 }}>
+                        <Typography variant="h4" textAlign={{ xs: 'center', md: 'left' }} color="text.primary" gutterBottom>
+                            Tech Stack
+                        </Typography>
+                        <Grid container spacing={2} rowSpacing={{ xs: 2, md: 4 }}>
+                            {TECH_STACK[data?.projectCode]?.map((val) => (
+                                <Grid item xs={12} md={4}>
+                                    <Typography variant="h6">{val}</Typography>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Box>
+                    <Box sx={{ mt: 6, display: !AWARDS[data?.projectCode].length && "none" }}>
                         <Typography
-                            component="h2"
-                            variant="h3"
-                            align="left"
+                            variant="h4"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             gutterBottom
                         >
-                            {data?.name}
+                            Awards/Recognition
                         </Typography>
 
-                        <Typography variant="h6" align="left" color="text.secondary" paragraph>
-                            {data?.description}
-                        </Typography>
-                    </Box>
-                    <Box mt={6}>
-                        <SlidingImageDisplay projectCode={data?.projectCode} />
-                    </Box>
-                </Box>
-                <Box style={{ display: 'flex' }}>
-                    <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
-                        Link:
-                    </Typography>
-                    <Link href={data?.github} target='_blank' mt={0.5}>
-                        {data?.github}
-                    </Link>
-                </Box>
-                <Box sx={{ mt: 6 }}>
-                    <Typography
-                        variant="h4"
-                        align="left"
-                        color="text.primary"
-                        gutterBottom
-                    >
-                        Tech Stack
-                    </Typography>
-                    <Grid container spacing={2} rowSpacing={4}>
-                        {TECH_STACK[data?.projectCode]?.map((val) => {
-                            return (
-                                <Grid item xs={4}>
-                                    <Typography variant="h6" >{val}</Typography>
-                                </Grid>
-                            )
-                        })}
-                    </Grid>
-                </Box>
-                <Box  sx={{ mt: 6, display: !AWARDS[data?.projectCode].length && "none" }}>
-                    <Typography
-                        variant="h4"
-                        align="left"
-                        color="text.primary"
-                        gutterBottom
-                    >
-                        Awards/Recognition
-                    </Typography>
-
-                    <Typography variant="h6" align="left" color="text.secondary" paragraph>
-                        <List
-                        sx={{
-                            listStyleType: 'disc',
-                            pl: 2,
-                            '& .MuiListItem-root': {
-                                display: 'list-item',
-                            }}}
+                        <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
+                            <List
+                                sx={{
+                                    listStyleType: 'disc',
+                                    pl: 2,
+                                    textAlign: { xs: 'center', md: 'left' },
+                                    '& .MuiListItem-root': {
+                                        display: 'list-item',
+                                    }
+                                }}
+                                
                             >
-                            {AWARDS[data?.projectCode]?.map((val) => {
-                                return (
-                                    <ListItem>
-                                        {val}
-                                    </ListItem>
-                                );
-                            })}
-                        </List>
-                    </Typography>
-                </Box>
+                                {AWARDS[data?.projectCode]?.map((val) => {
+                                    return (
+                                        <ListItem>
+                                            {val}
+                                        </ListItem>
+                                    );
+                                })}
+                            </List>
+                        </Typography>
+                    </Box>
                 </Box>
             </main>
         </ThemeProvider>
