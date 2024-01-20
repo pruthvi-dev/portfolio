@@ -35,7 +35,7 @@ export default function Profile() {
                 <Box px={10}>
                     <Box marginY={10} display={"flex"} flexDirection={{ xs: 'column', md: 'row' }} alignItems={"center"} justifyContent={"space-between"} >
                         {/* <MyImageCard /> */}
-                        <Box width={{ md: "60%" }}>
+                        <Box width={{ md: "50%" }}>
                             <Typography
                                 component="h2"
                                 variant="h3"
@@ -50,7 +50,7 @@ export default function Profile() {
                                 {data?.description}
                             </Typography>
                         </Box>
-                        <Box width={{ md: "40%" }} mt={6}>
+                        <Box width={{ md: "50%" }} mt={6}>
                             <SlidingImageDisplay projectCode={data?.projectCode} />
                         </Box>
                     </Box>

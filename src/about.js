@@ -52,8 +52,8 @@ export default function About() {
                                 I am a software developer utilizing my IT experience to understand multiple stakeholder
                                 perspectives to produce new-age viable solutions to real-world problems.
                             </Typography>
-                            <Box display="flex" alignItems="center" marginTop={2}>
-                                <Typography variant="h6" color="text.secondary" marginRight={4}>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} alignItems="center" marginTop={2}>
+                                <Typography variant="h5" textAlign={{ xs: 'center', md: 'left' }} color="text.primary" marginRight={4}>
                                     LinkedIn:
                                 </Typography>
                                 <Link href="https://www.linkedin.com/in/pruthvi-p-shivappa/" target="_blank" mt={0.5}>
@@ -69,7 +69,7 @@ export default function About() {
                     <Box sx={{ mt: 6 }}>
                         <Typography
                             variant="h5"
-                            align="left"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             fontWeight={"medium"}
                             gutterBottom
@@ -109,7 +109,7 @@ export default function About() {
                     <Box sx={{ mt: 6 }}>
                         <Typography
                             variant="h5"
-                            align="left"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             fontWeight={"medium"}
                             gutterBottom
@@ -118,18 +118,18 @@ export default function About() {
                             Work Experience
                         </Typography>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align='left' fontWeight={"bold"}>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} fontWeight={"bold"}>
                                     Software Development Engineer
                                 </Typography>
-                                <Typography variant="h6" align='left'>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}>
                                     September 2022 - Present
                                 </Typography>
                             </Box>
-                            <Typography variant="h6" align='left' color={green[900]}>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 Unify Technologies Pvt. Ltd.
                             </Typography>
-                            <Typography variant="h6" align="left" width={"80%"} color="text.secondary" paragraph>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}  color="text.secondary" paragraph>
                                 <List
                                     sx={{
                                         listStyleType: 'disc',
@@ -159,18 +159,18 @@ export default function About() {
                             </Typography>
                         </>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align='left' fontWeight={"bold"}>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} fontWeight={"bold"}>
                                     Data Engineer Intern
                                 </Typography>
-                                <Typography variant="h6" align='left'>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}>
                                     January 2022 - June 2022
                                 </Typography>
                             </Box>
-                            <Typography variant="h6" align='left' color={green[900]}>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 Amazon
                             </Typography>
-                            <Typography variant="h6" align="left" width={"80%"} color="text.secondary" paragraph>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
                                 <List
                                     sx={{
                                         listStyleType: 'disc',
@@ -195,7 +195,7 @@ export default function About() {
                     <Box sx={{ mt: 6 }}>
                         <Typography
                             variant="h5"
-                            align="left"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             fontWeight={"medium"}
                             gutterBottom
@@ -204,18 +204,18 @@ export default function About() {
                             Voluntary Work
                         </Typography>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align='left' fontWeight={"bold"}>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} fontWeight={"bold"}>
                                     Creative Lead
                                 </Typography>
-                                <Typography variant="h6" align='left'>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}>
                                     Aug 2020 - Jun 2022
                                 </Typography>
                             </Box>
-                            <Typography variant="h6" align='left' color={green[900]}>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 Google DSC JSSSTU
                             </Typography>
-                            <Typography variant="h6" align="left" width={"80%"} color="text.secondary" paragraph>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
                                 <List
                                     sx={{
                                         listStyleType: 'disc',
@@ -234,18 +234,18 @@ export default function About() {
                             </Typography>
                         </>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align='left' fontWeight={"bold"}>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} fontWeight={"bold"}>
                                     <Link href="https://play.google.com/store/apps/details?id=com.humane.csafeapp">CoviSafe </Link> app published on Play Store
                                 </Typography>
-                                <Typography variant="h6" align='left'>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}>
                                     Jul 2021
                                 </Typography>
                             </Box>
-                            <Typography variant="h6" align='left' color={green[900]}>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 K-Tech JSS STU
                             </Typography>
-                            <Typography variant="h6" align="left" width={"80%"} color="text.secondary" paragraph>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
                                 <List
                                     sx={{
                                         listStyleType: 'disc',
@@ -266,7 +266,7 @@ export default function About() {
                     <Box sx={{ mt: 6 }}>
                         <Typography
                             variant="h5"
-                            align="left"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             fontWeight={"medium"}
                             gutterBottom
@@ -275,25 +275,25 @@ export default function About() {
                             Education
                         </Typography>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align='left' fontWeight={"bold"}>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} fontWeight={"bold"}>
                                     B.E - Computer Science & Engineering
                                 </Typography>
-                                <Typography variant="h6" align='left'>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}>
                                     2018 - 2022
                                 </Typography>
                             </Box>
-                            <Typography variant="h6" align='left' color={green[900]}>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 JSS S&T University
                             </Typography>
                         </>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align='left' fontWeight={"bold"}>
+                            <Box style={{ display: 'flex' }} mt={4} flexDirection={{ xs: 'column', md: 'row' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} fontWeight={"bold"}>
                                     UI/UX Design Specialization-Coursera
                                 </Typography>
                             </Box>
-                            <Typography variant="h6" align='left' color={green[900]}>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 California Institute of Arts
                             </Typography>
                         </>
@@ -301,7 +301,7 @@ export default function About() {
                     <Box sx={{ mt: 6 }}>
                         <Typography
                             variant="h5"
-                            align="left"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             fontWeight={"medium"}
                             gutterBottom
@@ -310,8 +310,8 @@ export default function About() {
                             Accomplishments
                         </Typography>
                         <>
-                            <Box style={{ display: 'flex' }} width={"80%"} justifyContent={"space-between"}>
-                                <Typography variant="h6" align="left" width={"80%"} color="text.secondary" paragraph>
+                            <Box style={{ display: 'flex' }} justifyContent={"space-between"}>
+                                <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
                                     <List
                                         sx={{
                                             listStyleType: 'disc',
@@ -342,7 +342,7 @@ export default function About() {
                     <Box sx={{ mt: 4 }}>
                         <Typography
                             variant="h5"
-                            align="left"
+                            textAlign={{ xs: 'center', md: 'left' }}
                             color="text.primary"
                             fontWeight={"medium"}
                             gutterBottom
