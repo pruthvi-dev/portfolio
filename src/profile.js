@@ -32,7 +32,7 @@ export default function Profile() {
             <CssBaseline />
             <NavBar />
             <main style={{ paddingBottom: 30 }}>
-                <Box px={10}>
+                <Box px={6}>
                     <Box marginY={10} display={"flex"} flexDirection={{ xs: 'column', md: 'row' }} alignItems={"center"} justifyContent={"space-between"} >
                         {/* <MyImageCard /> */}
                         <Box width={{ md: "50%" }}>
@@ -49,19 +49,22 @@ export default function Profile() {
                             <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
                                 {data?.description}
                             </Typography>
+                            <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }}>
+                                <Typography variant="h5" textAlign={{ xs: 'center', md: 'left' }} color="text.primary" marginRight={4}>
+                                    Link:
+                                </Typography>
+
+                                <Link href={data?.github} target='_blank' mt={0.5}>
+                                    {data?.github}
+                                </Link>
+
+                            </Box>
                         </Box>
-                        <Box width={{ md: "50%" }} mt={6}>
+                        <Box width={{ md: "40%" }} mt={6}>
                             <SlidingImageDisplay projectCode={data?.projectCode} />
                         </Box>
                     </Box>
-                    <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }}>
-                        <Typography variant="h5" textAlign={{ xs: 'center', md: 'left' }} color="text.primary" marginRight={4}>
-                            Link:
-                        </Typography>
-                        <Link href={data?.github} target='_blank' mt={0.5}>
-                            {data?.github}
-                        </Link>
-                    </Box>
+
                     <Box sx={{ mt: 6 }}>
                         <Typography variant="h4" textAlign={{ xs: 'center', md: 'left' }} color="text.primary" gutterBottom>
                             Tech Stack
@@ -84,7 +87,7 @@ export default function Profile() {
                             Awards/Recognition
                         </Typography>
 
-                        <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
+                        <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary">
                             <List
                                 sx={{
                                     listStyleType: 'disc',
@@ -94,7 +97,7 @@ export default function Profile() {
                                         display: 'list-item',
                                     }
                                 }}
-                                
+
                             >
                                 {AWARDS[data?.projectCode]?.map((val) => {
                                     return (

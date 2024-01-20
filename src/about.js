@@ -27,7 +27,7 @@ export default function About() {
             <CssBaseline />
             <NavBar />
             <main style={{ paddingBottom: 30 }}>
-                <Box p={10}>
+                <Box px={6}>
                     <Box
                         display="flex"
                         flexDirection={{ xs: 'column', md: 'row' }}
@@ -129,7 +129,7 @@ export default function About() {
                             <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color={green[900]}>
                                 Unify Technologies Pvt. Ltd.
                             </Typography>
-                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }}  color="text.secondary" paragraph>
+                            <Typography variant="h6" textAlign={{ xs: 'center', md: 'left' }} color="text.secondary" paragraph>
                                 <List
                                     sx={{
                                         listStyleType: 'disc',
@@ -349,17 +349,17 @@ export default function About() {
                         >
                             Interests
                         </Typography>
-                        <Box display={"flex"} flexDirection={{ xs: 'column', md: 'row' }}  mb={2}>
-                            <Typography variant="h6" mr={20}>
+                        <Box display={"flex"} flexDirection={{ xs: 'column', md: 'row' }} mb={2}>
+                            <Typography variant="h6" mr={{ md: 20 }}>
                                 Poetry writing
                             </Typography>
-                            <Typography variant="h6" mr={20}>
+                            <Typography variant="h6" mr={{ md: 20 }}>
                                 Theatre
                             </Typography>
-                            <Typography variant="h6" mr={20}>
+                            <Typography variant="h6" mr={{ md: 20 }}>
                                 Travel
                             </Typography>
-                            <Typography variant="h6" mr={20}>
+                            <Typography variant="h6" mr={{ md: 20 }}>
                                 Fitness
                             </Typography>
                         </Box>
