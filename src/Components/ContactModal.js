@@ -14,7 +14,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 450,
+    width: { xs: '90%', sm: '80%', md: 450 },
     bgcolor: 'background.paper',
     boxShadow: 12,
     p: 4,
@@ -52,15 +52,15 @@ export default function ContactModal(props) {
                             <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
                                 Email ID:
                             </Typography>
-                            <Link href="pruthvipshivappa@gmail.com" target='_blank'  mt={0.5}>
-                               pruthvipshivappa@gmail.com
+                            <Link href="pruthvipshivappa@gmail.com" target='_blank' mt={0.5}>
+                                pruthvipshivappa@gmail.com
                             </Link>
                         </Box>
                         <Box style={{ display: 'flex' }} marginTop={2}>
                             <Box mt={0.6} mr={2}>
                                 <LinkedInIcon color='success' />
                             </Box>
-                            <Typography  variant="h6" align="left" color="text.secondary" marginRight={4}>
+                            <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
                                 LinkedIn:
                             </Typography>
                             <Link href="https://www.linkedin.com/in/pruthvi-p-shivappa/" target='_blank' mt={0.5}>
@@ -68,7 +68,7 @@ export default function ContactModal(props) {
                             </Link>
                         </Box>
                         <Box style={{ display: 'flex' }} marginTop={2}>
-                        <Box mt={0.6} mr={2}>
+                            <Box mt={0.6} mr={2}>
                                 <CallIcon color='success' />
                             </Box>
                             <Typography variant="h6" align="left" color="text.secondary" marginRight={2}>
@@ -79,9 +79,9 @@ export default function ContactModal(props) {
                             </Typography>
                         </Box>
                     </Box>
-                    
                 </Modal>
             </div>
+
         </ThemeProvider>
     );
 }
