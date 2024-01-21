@@ -45,35 +45,41 @@ export default function ContactModal(props) {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
-                        <Box style={{ display: 'flex' }} marginTop={2}>
+                        <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} marginTop={2}>
+                            <Box display={"flex"}>
                             <Box mt={0.6} mr={2}>
                                 <EmailIcon color='success' />
                             </Box>
                             <Typography variant="h6" align="left" color="text.secondary" marginRight={2}>
                                 Email ID:
                             </Typography>
+                            </Box>
                             <Link href="pruthvipshivappa@gmail.com" target='_blank' mt={0.5}>
                                 pruthvipshivappa@gmail.com
                             </Link>
                         </Box>
-                        <Box style={{ display: 'flex' }} marginTop={2}>
+                        <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} marginTop={2}>
+                        <Box display={"flex"}>
                             <Box mt={0.6} mr={2}>
                                 <LinkedInIcon color='success' />
                             </Box>
                             <Typography variant="h6" align="left" color="text.secondary" marginRight={2}>
                                 LinkedIn:
                             </Typography>
+                            </Box>
                             <Link href="https://www.linkedin.com/in/pruthvi-p-shivappa/" target='_blank' mt={0.5}>
                                 https://www.linkedin.com/in/pruthvi-p-shivappa/
                             </Link>
                         </Box>
-                        <Box style={{ display: 'flex' }} marginTop={2}>
+                        <Box style={{ display: 'flex' }} flexDirection={{ xs: 'column', md: 'row' }} marginTop={2}>
+                        <Box display={"flex"}>
                             <Box mt={0.6} mr={2}>
                                 <CallIcon color='success' />
                             </Box>
                             <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
                                 Phone:
                             </Typography>
+                            </Box>
                             <Typography variant="body1" mt={0.75} align="left" color={green[900]}>
                                 9591716584
                             </Typography>
