@@ -17,7 +17,7 @@ const style = {
     width: { xs: '90%', sm: '80%', md: 450 },
     bgcolor: 'background.paper',
     boxShadow: 12,
-    p: 4,
+    p: 3,
 };
 
 const theme = createTheme({
@@ -49,7 +49,7 @@ export default function ContactModal(props) {
                             <Box mt={0.6} mr={2}>
                                 <EmailIcon color='success' />
                             </Box>
-                            <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
+                            <Typography variant="h6" align="left" color="text.secondary" marginRight={2}>
                                 Email ID:
                             </Typography>
                             <Link href="pruthvipshivappa@gmail.com" target='_blank' mt={0.5}>
@@ -60,7 +60,7 @@ export default function ContactModal(props) {
                             <Box mt={0.6} mr={2}>
                                 <LinkedInIcon color='success' />
                             </Box>
-                            <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
+                            <Typography variant="h6" align="left" color="text.secondary" marginRight={2}>
                                 LinkedIn:
                             </Typography>
                             <Link href="https://www.linkedin.com/in/pruthvi-p-shivappa/" target='_blank' mt={0.5}>
@@ -71,10 +71,10 @@ export default function ContactModal(props) {
                             <Box mt={0.6} mr={2}>
                                 <CallIcon color='success' />
                             </Box>
-                            <Typography variant="h6" align="left" color="text.secondary" marginRight={2}>
-                                Phone No.:
+                            <Typography variant="h6" align="left" color="text.secondary" marginRight={4}>
+                                Phone:
                             </Typography>
-                            <Typography variant="body1" mt={0.75} align="left" color={green[900]} marginRight={4}>
+                            <Typography variant="body1" mt={0.75} align="left" color={green[900]}>
                                 9591716584
                             </Typography>
                         </Box>
