@@ -72,7 +72,7 @@ export default function Home() {
                                 Pruthvi
                             </Typography>
                             <Typography variant="h3" textAlign={{ xs: 'center', md: 'right' }} color={green[900]}>
-                                Frontend Developer | UI UX Designer
+                                Software Developer | UI UX Designer
                             </Typography>
                             <Typography variant="h5" textAlign={{ xs: 'center', md: 'right' }} color="text.secondary" paragraph>
                                 Welcome to my portfolio! I use this platform to showcase my work in development and UI/UX design.

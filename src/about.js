@@ -46,7 +46,7 @@ export default function About() {
                                 Pruthvi H P
                             </Typography>
                             <Typography variant="h5" color="text.primary" fontWeight="medium" gutterBottom>
-                                Frontend Developer
+                                Software Developer
                             </Typography>
                             <Typography variant="h6" color="text.secondary">
                                 I am a software developer utilizing my IT experience to understand multiple stakeholder
