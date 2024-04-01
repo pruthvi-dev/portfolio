@@ -20,8 +20,6 @@ import NavBar from './Components/NavBar';
 import { useRef } from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { IconButton } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import { homePageStyles } from './Styles/homePage';
 
 const theme = createTheme({
     palette: {
@@ -38,9 +36,6 @@ export default function Home() {
     const navigate = useNavigate();
     const projectRef = useRef(null);
 
-    const useStyles = makeStyles(homePageStyles);
-
-    const classes = useStyles();
     const navigateToProfile = () => {
         const element = projectRef.current;
         if (element) {
@@ -82,7 +77,7 @@ export default function Home() {
 
 
                     <IconButton
-                        className={classes.bouncingArrow}
+                        // className={classes.bouncingArrow}
                         sx={{ mt: 2 }}
                         onClick={navigateToProfile}
                     >
@@ -118,7 +113,7 @@ export default function Home() {
                             <Grid item key={card?.key} xs={12} sm={6} md={4}>
                                 <Card
                                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                                    className={classes.cards}
+                                    // className={classes.cards}
                                 >
                                     <CardMedia
                                         component="div"
