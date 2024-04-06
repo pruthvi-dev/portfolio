@@ -138,6 +138,7 @@ export default function Home() {
                                         <Button
                                             size="small"
                                             target='_blank'
+                                            href={card?.github}
                                         >
                                             Link {<LaunchIcon />}
                                         </Button>
